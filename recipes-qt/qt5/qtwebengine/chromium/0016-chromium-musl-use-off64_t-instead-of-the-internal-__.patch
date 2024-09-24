@@ -1,4 +1,4 @@
-From b1b03941337119a63199b8c8164d31ab2eedd7a7 Mon Sep 17 00:00:00 2001
+From aef1128c27a1975168bb371337bfd59f49873546 Mon Sep 17 00:00:00 2001
 From: Khem Raj <raj.khem@gmail.com>
 Date: Fri, 7 Jul 2017 14:38:37 -0700
 Subject: [PATCH] chromium: musl: use off64_t instead of the internal __off64_t
@@ -7,6 +7,7 @@ Subject: [PATCH] chromium: musl: use off64_t instead of the internal __off64_t
   does not support the 32-bit ABI.
 
 Signed-off-by: Khem Raj <raj.khem@gmail.com>
+Upstream-Status: Pending
 ---
  .../tcmalloc/chromium/src/malloc_hook_mmap_linux.h     | 10 +++++-----
  1 file changed, 5 insertions(+), 5 deletions(-)

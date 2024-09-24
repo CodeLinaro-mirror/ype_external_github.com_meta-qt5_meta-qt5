@@ -25,7 +25,7 @@ FILESEXTRAPATHS =. "${FILE_DIRNAME}/qtbase:"
 
 # common for qtbase-native, qtbase-nativesdk and qtbase
 # Patches from https://github.com/meta-qt5/qtbase/commits/b5.15-shared
-# 5.15.meta-qt5-shared.3
+# 5.15.meta-qt5-shared.4
 SRC_URI += "\
     file://0001-Add-linux-oe-g-platform.patch \
     file://0002-cmake-Use-OE_QMAKE_PATH_EXTERNAL_HOST_BINS.patch \
@@ -46,15 +46,16 @@ SRC_URI += "\
     file://0017-Define-__NR_futex-if-it-does-not-exist.patch \
     file://0018-Revert-Fix-workaround-in-pthread-destructor.patch \
     file://0019-tst_QPluginLoader-Simplify-creating-a-fake-pointer-i.patch \
-    file://0020-qbytearraymatcher-Include-limits-header.patch \
+    file://0021-rcc-Just-dcument-file-name-without-full-path-to-redu.patch \
+    file://0022-testlib-don-t-track-the-build-or-source-directories.patch \
 "
 
 # common for qtbase-native and nativesdk-qtbase
 # Patches from https://github.com/meta-qt5/qtbase/commits/b5.15-native
-# 5.15.meta-qt5-native.3
+# 5.15.meta-qt5-native.4
 SRC_URI += " \
-    file://0021-Always-build-uic-and-qvkgen.patch \
-    file://0022-Avoid-renameeat2-for-native-sdk-builds.patch \
+    file://0023-Always-build-uic-and-qvkgen.patch \
+    file://0024-Avoid-renameeat2-for-native-sdk-builds.patch \
 "
 
 # CMake's toolchain configuration of nativesdk-qtbase
@@ -201,4 +202,4 @@ fakeroot do_generate_qt_environment_file() {
 do_generate_qt_environment_file[umask] = "022"
 addtask generate_qt_environment_file after do_install before do_package
 
-SRCREV = "c95f96550fc74b00bb0d3a82e7cb6b0e20bc76ac"
+SRCREV = "358aebba7280d6d2b59b1f740747a4a3d1b7a54a"

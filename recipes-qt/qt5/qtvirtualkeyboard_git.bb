@@ -6,6 +6,8 @@ LIC_FILES_CHKSUM = " \
     file://LICENSE.GPL3;md5=d32239bcb673463ab874e80d47fae504 \
 "
 
+SRC_URI += "file://0001-replace-deprecated-std-auto_ptr-with-std-unique_ptr.patch"
+
 # To enabled Nuance T9 Write support, you need to provide the licensed components
 # and enable "t9write" in PACKAGECONFIG. This can be done in a separate .bbappend file.
 # for example:
@@ -71,4 +73,4 @@ FILES:${PN} += "${OE_QMAKE_PATH_DATA}/qtvirtualkeyboard/lipi_toolkit"
 
 DEPENDS += "qtbase qtdeclarative qtmultimedia qtquickcontrols qtsvg qtxmlpatterns qtdeclarative-native"
 
-SRCREV = "5ab286d42421f387d8f2d23b33225ec2469958d7"
+SRCREV = "d8b87cbb28561654121d44b5d7dedb361e6f773c"
